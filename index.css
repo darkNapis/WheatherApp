@@ -1,7 +1,7 @@
 body {
     margin: 0;
     width: 100%;
-    height: 100vh;
+    height: 700px;
     font-family: 'Montserrat', sans-serif;
     background-color: #343d4b;
     display: -webkit-box;
@@ -13,27 +13,27 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  
+  } 
 .container {
-    border-radius: 25px;
+    border-radius: 120px;
     -webkit-box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
             box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
     background-color: #222831;
     color: #ffffff;
-    width: 70%;
-    height: 400px;
+    width: 40%;
+    height: 500px;
   }
 .container .app-title {
-        position: absolute;
+        text-decoration-line: underline;
+        position: relative;
         top: 40%;
         left: 50%;
-        margin-top: -50px;
+        margin-top: -55px;
         margin-left: -50px;
-        width: 100px;
-        height: 100px;  
+        width: 110px;
+        height: 50px;
+        border: 3px flex #ddd; 
 }
-
 .container .list {
     position: absolute;
     top: 50%;
@@ -44,7 +44,6 @@ body {
     height: 100px;
     cursor: pointer;  
 }
-
 .container .dayInfo {
     position: absolute;
     top: 70%;
