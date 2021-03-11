@@ -3,23 +3,48 @@ const weatherData = {
     tempUnit: 'C',
     windSpeedUnit: 'm/s',
     days: [
-    { day: 'Mon', temp: 22, windDirection: 'north-east', windSpeed: 23 , type:'sunny' },
+    { day: 'Mon', temp: 26, windDirection: 'north-east', windSpeed: 23 , type:'sunny' },
     { day: 'Tue', temp: 14, windDirection: 'north-west', windSpeed: 14, type: 'rainy' },
     { day: 'Wed', temp: 17, windDirection: 'south-east', windSpeed: 20, type: 'cloudy' },
-    { day: 'Thu', temp: 22, windDirection: 'north-east', windSpeed: 25 , type:'sunny' },
-    { day: 'Fri', temp: 14, windDirection: 'north-west', windSpeed: 18, type: 'rainy' },
-    { day: 'Sat', temp: 17, windDirection: 'south-east', windSpeed: 17, type: 'cloudy' },
-    { day: 'Sun', temp: 17, windDirection: 'south-east', windSpeed: 16, type: 'cloudy' },
+    { day: 'Thu', temp: 24, windDirection: 'north-east', windSpeed: 25 , type:'sunny' },
+    { day: 'Fri', temp: 13, windDirection: 'north-west', windSpeed: 18, type: 'rainy' },
+    { day: 'Sat', temp: 16, windDirection: 'south-east', windSpeed: 17, type: 'cloudy' },
+    { day: 'Sun', temp: 15, windDirection: 'south-east', windSpeed: 16, type: 'cloudy' },
     ]
     };
 
 function dayClicked() {
     const dayWrapper = document.createElement('div');
-    dayWrapper.append(this.day + " " + this.temp + " " + weatherData.tempUnit + " " + this.windDirection + " " + this.windSpeed + " " + this.type + " ");
+    dayWrapper.style = "border: 2px solid red; padding: 5px;"
+    
+    const dayTextWrapper = document.createElement('div');
+    dayTextWrapper.append(this.day);
+    //dayWrapper.append(this.day + " " + this.temp + " " + 
+                        //weatherData.tempUnit + " " + this.windDirection + " " + 
+                        //this.windSpeed + "km/h " + this.type + " ");
+    dayWrapper.appendChild(dayTextWrapper);
+    
+    const dayTempWrapper = document.createElement('div');
+    dayTempWrapper.style = "border: 2px solid red; padding: 5px;"
+    dayWrapper.appendChild(dayTempWrapper);
+    dayTempWrapper.append(this.temp + " " + weatherData.tempUnit + " ");
+    
+    const dayWindDirectionWrapper = document.createElement('div');
+    dayWrapper.appendChild(dayWindDirectionWrapper);
+    dayWindDirectionWrapper.append(this.windDirection);
+    
+    const dayWindSpeedWrapper = document.createElement('div');
+    dayWrapper.appendChild(dayWindSpeedWrapper);
+    dayWindSpeedWrapper.append(this.windSpeed + "km/h ");
+    
+    const dayTypeWrapper = document.createElement('div');
+    dayWrapper.appendChild(dayTypeWrapper);
+    dayTypeWrapper.append(this.type);
+    
     const dayInfo = document.querySelector(".dayInfo");
     dayInfo.innerHTML="";
     dayInfo.appendChild(dayWrapper);
-} 
+}
 
 function createList() {
     const list = document.querySelector(".list");
@@ -30,6 +55,6 @@ function createList() {
         dayWrapper.append(element.day + " " + element.temp + " " + weatherData.tempUnit);
         list.appendChild(dayWrapper);
     }
-}    
+}
 
 createList();
