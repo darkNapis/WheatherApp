@@ -25,6 +25,8 @@ body {
   }
 .container .app-title {
         text-decoration-line: underline;
+        text-transform: uppercase;
+        color: darkslategrey;
         position: relative;
         top: 25%;
         left: 50%;
@@ -35,6 +37,7 @@ body {
         border: 3px flex #ddd; 
 }
 .container .list {
+    color: darkolivegreen;
     position: absolute;
     top: 30%;
     left: 50%;
@@ -45,6 +48,7 @@ body {
     cursor: pointer;  
 }
 .container .dayInfo {
+    color: darkolivegreen;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -52,6 +56,11 @@ body {
     margin-left: -50px;
     width: -80px;
     height: -80px;
+    table-layout: inherit;
+    border-radius: 50%;
 }
+
+
+
 
 
