@@ -26,7 +26,7 @@ body {
 .container .app-title {
         text-decoration-line: underline;
         position: relative;
-        top: 40%;
+        top: 25%;
         left: 50%;
         margin-top: -55px;
         margin-left: -50px;
@@ -36,7 +36,7 @@ body {
 }
 .container .list {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     margin-top: -50px;
     margin-left: -50px;
@@ -46,7 +46,7 @@ body {
 }
 .container .dayInfo {
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
     margin-top: -50px;
     margin-left: -50px;
